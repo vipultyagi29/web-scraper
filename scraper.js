@@ -15,9 +15,9 @@ async function scrapeEvents() {
     let events = [];
 
     $(".card-content").each((index, element) => {
-      const title = $(element).find("h3").text().trim() || "No Title";
+      const title = $(element).find("._preTitle_16qav_131").text().trim() || "No Title";
       const date = $(element).find(".date").text().trim() || "No Date";
-      const venue = $(element).find(".venue").text().trim() || "No Venue";
+      const venue = $(element).find(".._p_ej8vw_1").text().trim() || "No Venue";
       const link = "https://www.timeout.com" + $(element).find("a").attr("href");
 
       events.push({ title, date, venue, link });
